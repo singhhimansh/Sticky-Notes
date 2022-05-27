@@ -8,12 +8,13 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
-<body style="background-color: rgb(49, 49, 49); color: rgb(10, 222, 215);">
 
-
-
+<body class="body">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -26,34 +27,12 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#"></a>
                     </li>
-
-                    <!-- Additional nav items -->
-
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li> -->
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" id="searchtxt" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" id="searchtxt" type="search" placeholder="Search note"
+                        aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
@@ -61,47 +40,44 @@
     </nav>
 
     <!-- MAIN CONATINER -->
-    <div class="container my-3" >
+    <div class="container my-5">
 
-        <h1>Welcome to Sticky Notes</h1>
-
-
-
+        <!-- <h1>Welcome to Sticky Notes</h1> -->
         <!-- NOTE INPUT CARD -->
 
-        <div class="card" style="width: 18rem;">
+        <div class="card" id="card">
             <div class="card-body">
-                <h5 class="card-title mb-3">Add a Note</h5>
+                <!-- card Add a note -->
+                <h5 class="card-title mb-3" id="cardhead">Add a Note</h5>
 
                 <!-- textarea -->
                 <form>
-
+                    <!-- title -->
                     <div class="mb-3">
                         <input type="text" class="form-control" placeholder="Title" id="addtitle"
                             aria-describedby="emailHelp">
-
                     </div>
+                    <!-- textarea -->
                     <div class="form-floating mb-3">
                         <textarea class="form-control" placeholder="Leave aa comment here" id="addtxt"
                             style="height: 100px"></textarea>
-                        <label for="floatingTextarea2" style="color: gray ;">Note</label>
+                        <label for="floatingTextarea2" style="color: gray ;">Write a message . . . </label>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" id="addbtn">Add Note</button>
+                    <button type="submit" class="btn btn-primary" id="addbtn">Save</button>
                 </form>
 
             </div>
         </div>
+    </div>
 
-
-        <!-- NOTE DISPLAY AREA  -->
-
+    <!-- NOTE DISPLAY AREA  -->
+    <div class="container my-5" id="displayzone">
         <div>
-            <button id='clearall' class="btn btn-primary" style="margin-top: 3rem;"> Clear All Notes</button>
-            <H1 style="margin-top: 3rem;">Your Notes</H1>
+            <!-- clear all notes -->
+            <button id='clearall' class="btn btn-primary"> Clear All Notes</button>
 
-            
-        
+            <h1>Your Notes</h1>
         </div>
 
 
@@ -109,50 +85,19 @@
 
         <div id="notes" class="row container-fluid">
 
-           
-<!-- 
-            <div class="my-2 mx-2 card" style="width: 18rem;">
+                     <!-- Sample HTML text to be injected by JS -->
+            <!--             
+            <div class="notecard my-2 mx-2 card" id="notecard">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-
-            <div class="my-2 mx-2 card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-
-            <div class="my-2 mx-2 card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-
-            <div class="my-2 mx-2 card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title"> ${titleObj[index]} </h5>
+                    <hr id="divider">
+                    <p class="card-text"> ${element}</p>
+                    <button id='${index}' onclick="deletenote(this.id)" class="btn btn-primary"> Delete</button>
                 </div>
             </div> -->
 
-
         </div>
-
-
     </div>
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"

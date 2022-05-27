@@ -1,0 +1,117 @@
+.body {
+    color: #c8e0ca;
+    background-color: #145858;
+    overflow: auto;
+}
+
+#card {
+    color: #145858;
+    width: 18rem;
+    background-color: #c8e0ca;
+    /* background-color: #f7b318; */
+}
+
+#cardhead {
+    text-align: center;
+    font-weight: 700;
+}
+
+#addtitle {
+
+    background-color: #e8e9e8d9;
+    border-bottom: 1.5px solid #145858;
+    box-shadow: none;
+}
+
+
+
+#addtxt {
+
+    background-color: #e8e9e8d9;
+    border-bottom: 1.5px solid #145858;
+    box-shadow: none;
+}
+
+#addbtn {
+
+    background-color: #057f92;
+    border: none;
+    position: relative;
+    left: 33%;
+    padding: 7px 28px;
+
+}
+
+#addbtn:hover {
+
+    background-color: #05a4bd;
+
+}
+
+
+#clearall {
+    float: right;
+    margin-top: 4px;    
+    background-color: #f8ff7b;
+    color: #0a3333;
+    font-weight: 500;
+}
+
+#clearall:hover{
+    background-color: #f9826e;
+    /* font-weight: 600; */
+}
+
+
+#notecard {
+    width: 18rem;
+    height: 20rem;
+    background-color: #c8e0ca;
+}
+
+.card-title{
+    text-align: center;
+    color: #145858;
+    font-weight: 700;
+}
+
+#divider {
+    color: #0a3333;
+    background-color: #0a3333;
+    height: 2px;
+}
+
+.card-text {
+    color: #105454;
+    text-align: center;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body p {
+    height: 10.5rem;
+    overflow: scroll;
+    padding: 2px 5px 2px 2px;
+}
+#delete{
+    align-self: center;
+
+}
+
+.card-body button {
+    background-color: #057f92;
+    border: none;
+    padding: 7px 25px;
+    /* position: relative;
+    left: 30%;
+    padding: 4px 22px; */
+}
+
+.card-body button:hover {
+    
+    background-color: #05a4bd;
+}
+

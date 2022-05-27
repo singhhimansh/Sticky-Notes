@@ -57,12 +57,12 @@ function shownotes() {
     notesObj.forEach(function (element, index,) {
         html += `
         
-        <div class="notecard my-2 mx-2 card" style="width: 18rem;">
+        <div class="notecard my-2 mx-2 card" id="notecard">
             <div class="card-body">
-                <h5 class="card-title" style="color: black"> ${titleObj[index]} </h5>
-                <hr style="color: black">
-                <p class="card-text"  style="color: rgb(0, 37, 149) "> ${element}</p>
-                    <button id='${index}' onclick="deletenote(this.id)" class="btn btn-primary"> Delete Note</button>
+                <h5 class="card-title"> ${titleObj[index]} </h5>
+                <hr id="divider">
+                <p class="card-text"> ${element}</p>
+                <div id="delete"><button id='${index}' onclick="deletenote(this.id)"         class="btn btn-primary"> Delete</button></div>
             </div>
         </div>
         `
