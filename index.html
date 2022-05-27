@@ -10,6 +10,9 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/note.png">
+
+    <title>Sticky Notes</title>
 
 </head>
 
@@ -40,7 +43,7 @@
     </nav>
 
     <!-- MAIN CONATINER -->
-    <div class="container my-5">
+    <div class="container my-5 py-4" id="card-instruct-cont">
 
         <!-- <h1>Welcome to Sticky Notes</h1> -->
         <!-- NOTE INPUT CARD -->
@@ -48,7 +51,7 @@
         <div class="card" id="card">
             <div class="card-body">
                 <!-- card Add a note -->
-                <h5 class="card-title mb-3" id="cardhead">Add a Note</h5>
+                <h5 class="card-title mb-3" id="cardhead">Add a Note<img src="images/pencil.png" alt=""></h5>
 
                 <!-- textarea -->
                 <form>
@@ -69,6 +72,26 @@
 
             </div>
         </div>
+
+        <div id="boytable">
+            <img src="images/boytable.png" alt="">
+        </div>
+        <div class="instruct">
+            <h2 class="instruct-item">Hello Pal</h2>
+            <h4 class="instruct-item">Welcome to Sticky Notes</h4>
+            <p class="instruct-item">With this app, you can take your notes and pin them down below.</p>
+            <p class="instruct-item">Start with adding a Title and then write the message.</p>
+            <p class="instruct-item">Hit 'Save' to pin it down.</p>
+            <p class="instruct-item">Voila done !!</p>
+
+            <!-- <p class="instruct-item">PIN</p>
+            <p class="instruct-item">IT</p>
+            <p class="instruct-item">DOWN</p> -->
+
+
+        </div>
+
+
     </div>
 
     <!-- NOTE DISPLAY AREA  -->
@@ -85,7 +108,7 @@
 
         <div id="notes" class="row container-fluid">
 
-                     <!-- Sample HTML text to be injected by JS -->
+            <!-- Sample HTML text to be injected by JS -->
             <!--             
             <div class="notecard my-2 mx-2 card" id="notecard">
                 <div class="card-body">

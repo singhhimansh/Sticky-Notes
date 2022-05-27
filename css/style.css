@@ -4,11 +4,27 @@
     overflow: auto;
 }
 
+/* container 1- note card and instructions */
+
+#card-instruct-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 30px auto;
+    align-items: center;
+}
+
+
+
+/* note card */
 #card {
     color: #145858;
     width: 18rem;
+    height: 18rem;
     background-color: #c8e0ca;
-    /* background-color: #f7b318; */
+    box-sizing: content-box;
+
+
 }
 
 #cardhead {
@@ -48,16 +64,39 @@
 
 }
 
+/* instruction */
 
+.instruct {
+    width: 20rem;
+    /* float: right; */
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    text-align: center;
+    /* padding: 30px 20px; */
+}
+
+.instruct-item {
+    /* margin: 5px 0; */
+    padding: 4px;
+}
+
+#boytable img {
+    width: 230px;
+    align-items: center;
+}
+
+
+/* clear all notes button */
 #clearall {
     float: right;
-    margin-top: 4px;    
+    margin-top: 4px;
     background-color: #f8ff7b;
     color: #0a3333;
     font-weight: 500;
 }
 
-#clearall:hover{
+#clearall:hover {
     background-color: #f9826e;
     /* font-weight: 600; */
 }
@@ -69,7 +108,7 @@
     background-color: #c8e0ca;
 }
 
-.card-title{
+.card-title {
     text-align: center;
     color: #145858;
     font-weight: 700;
@@ -86,17 +125,24 @@
     text-align: center;
 }
 
-.card-body{
+.card-body {
     display: flex;
     flex-direction: column;
 }
+
+.card-body img{
+    margin-left: 5px;
+    width: 35px;
+}
+
 
 .card-body p {
     height: 10.5rem;
     overflow: scroll;
     padding: 2px 5px 2px 2px;
 }
-#delete{
+
+#delete {
     align-self: center;
 
 }
@@ -111,7 +157,6 @@
 }
 
 .card-body button:hover {
-    
+
     background-color: #05a4bd;
 }
-
