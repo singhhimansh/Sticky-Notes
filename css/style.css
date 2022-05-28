@@ -3,8 +3,6 @@
     background-color: #145858;
     overflow: auto;
     font-family: 'Satisfy', cursive;
-    margin-bottom: 110px;
-
 }
 
 /* navbar */
@@ -258,7 +256,7 @@
 /* footer */
 
 footer{
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;

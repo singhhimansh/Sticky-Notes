@@ -48,78 +48,79 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" id="searchtxt" type="search" placeholder="Search note"
-                        aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" id="searchtxt" type="search" placeholder="Search note"
+                    aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
         </div>
     </nav>
 
-    <!-- MAIN CONATINER -->
-    <div class="container my-5 py-4" id="card-instruct-cont">
+    <main>
+        <!-- MAIN CONATINER -->
+        <div class="container my-5 py-4" id="card-instruct-cont">
 
-        <!-- <h1>Welcome to Sticky Notes</h1> -->
+            <!-- <h1>Welcome to Sticky Notes</h1> -->
 
-        <!-- NOTE INPUT CARD -->
-        <div class="card" id="card">
-            <div class="card-body">
-                <!-- card Add a note -->
-                <h5 class="card-title mb-3" id="cardhead">Add a Note<img src="images/pencil.png" alt=""></h5>
+            <!-- NOTE INPUT CARD -->
+            <div class="card" id="card">
+                <div class="card-body">
+                    <!-- card Add a note -->
+                    <h5 class="card-title mb-3" id="cardhead">Add a Note<img src="images/pencil.png" alt=""></h5>
 
-                <!-- textarea -->
-                <form id="inputform">
-                    <!-- title -->
-                    <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Title" id="addtitle"
-                            aria-describedby="emailHelp">
-                    </div>
                     <!-- textarea -->
-                    <div class="form-floating mb-3">
-                        <textarea class="form-control" placeholder="Leave aa comment here" id="addtxt"
-                            style="height: 100px"></textarea>
-                        <label for="floatingTextarea2" style="color: gray ;">Write a message . . . </label>
-                    </div>
+                    <form id="inputform">
+                        <!-- title -->
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Title" id="addtitle"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <!-- textarea -->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" placeholder="Leave aa comment here" id="addtxt"
+                                style="height: 100px"></textarea>
+                            <label for="floatingTextarea2" style="color: gray ;">Write a message . . . </label>
+                        </div>
 
-                    <button type="submit" class="btn btn-primary" id="addbtn">Save</button>
-                </form>
+                        <button type="submit" class="btn btn-primary" id="addbtn">Save</button>
+                    </form>
+
+                </div>
+            </div>
+
+            <div id="boytable">
+                <img src="images/boytable.png" alt="">
+            </div>
+            <div class="instruct">
+                <h3 class="instruct-item">Hello Pal</h3>
+                <h4 class="instruct-item">Welcome to Sticky Notes</h4>
+                <p class="instruct-item">With this app, you can take your notes and pin them down below.</p>
+                <p class="instruct-item">Start with adding a Title and then write the message.</p>
+                <p class="instruct-item">Hit 'Save' to pin it down.</p>
+                <p class="instruct-item">Voila. That's all !!!</p>
 
             </div>
-        </div>
 
-        <div id="boytable">
-            <img src="images/boytable.png" alt="">
-        </div>
-        <div class="instruct">
-            <h3 class="instruct-item">Hello Pal</h3>
-            <h4 class="instruct-item">Welcome to Sticky Notes</h4>
-            <p class="instruct-item">With this app, you can take your notes and pin them down below.</p>
-            <p class="instruct-item">Start with adding a Title and then write the message.</p>
-            <p class="instruct-item">Hit 'Save' to pin it down.</p>
-            <p class="instruct-item">Voila. That's all !!!</p>
 
         </div>
 
+        <!-- NOTE DISPLAY AREA  -->
+        <div class="container my-5" id="displayzone">
+            <div>
+                <!-- clear all notes -->
+                <button id='clearall' class="btn btn-primary"> Clear All Notes</button>
 
-    </div>
-
-    <!-- NOTE DISPLAY AREA  -->
-    <div class="container my-5" id="displayzone">
-        <div>
-            <!-- clear all notes -->
-            <button id='clearall' class="btn btn-primary"> Clear All Notes</button>
-
-            <h3>Your Notes</h3>
-        </div>
+                <h3>Your Notes</h3>
+            </div>
 
 
-        <hr>
+            <hr>
 
-        <div id="notes" class="row container-fluid">
+            <div id="notes" class="row container-fluid">
 
-            <!-- Sample HTML text to be injected by JS -->
-            <!--             
+                <!-- Sample HTML text to be injected by JS -->
+                <!--             
             <div class="notecard my-2 mx-2 card" id="notecard">
                 <div class="card-body">
                     <h4 class="card-title"> ${titleObj[index]} </h4>
@@ -129,15 +130,18 @@
                 </div>
             </div> -->
 
+            </div>
         </div>
-    </div>
+
+    </main>
 
     <footer>
 
         <div class="copyright">
 
             <p>Copyright &copy Sticky Notes</p>
-            <p id="dev"> Handcrafted with <i class="fa fa-heart" style="color: red;"> </i>  by <a href="https://singhhimansh.github.io/" target="_blank"><img id="devlogo"
+            <p id="dev"> Handcrafted with <i class="fa fa-heart" style="color: red;"> </i> by <a
+                    href="https://singhhimansh.github.io/" target="_blank"><img id="devlogo"
                         src="images/logo skyblue.png"> Himanshu Singh </a>
             </p>
 
