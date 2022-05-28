@@ -2,6 +2,8 @@
     color: #c8e0ca;
     background-color: #145858;
     overflow: auto;
+    font-family: 'Satisfy', cursive;
+   
 }
 
 /* container 1- note card and instructions */
@@ -39,6 +41,11 @@
     box-shadow: none;
 }
 
+/* pencil image in title  */
+.card-body img {
+    margin-left: 5px;
+    width: 35px;
+}
 
 
 #addtxt {
@@ -81,9 +88,46 @@
     padding: 4px;
 }
 
+.instruct h2 {
+    /* font-family: 'Alegreya SC', serif; */
+    /* font-family: 'Cookie', cursive; */
+    /* font-family: 'Dancing Script', cursive; */
+    /* font-family: 'IM Fell English SC', serif; */
+    /* font-family: 'Satisfy', cursive; --> */
+    /* font-family: 'Cookie', cursive; */
+    font-family: 'Amatic SC', cursive;
+}
+.instruct h4 {
+    /* font-family: 'Alegreya SC', serif; */
+    /* font-family: 'Cookie', cursive; */
+    /* font-family: 'Dancing Script', cursive; */
+    /* font-family: 'IM Fell English SC', serif; */
+    /* font-family: 'Satisfy', cursive; --> */
+    /* font-family: 'Cookie', cursive; */
+    font-family: 'Amatic SC', cursive;
+}
+.instruct p {
+    /* font-family: 'Alegreya SC', serif; */
+    /* font-family: 'Cookie', cursive; */
+    /* font-family: 'Dancing Script', cursive; */
+    /* font-family: 'IM Fell English SC', serif; */
+    font-family: 'Satisfy', cursive;
+    /* font-family: 'Cookie', cursive; */
+    /* font-family: 'Amatic SC', cursive; */
+}
+
 #boytable img {
     width: 230px;
     align-items: center;
+}
+
+#displayzone h1 {
+
+    font-weight: 900;
+    font-variant-caps: petite-caps;
+
+    font-family: 'Dancing Script', cursive;
+
 }
 
 
@@ -102,16 +146,19 @@
 }
 
 
+/* saved note card */
 #notecard {
     width: 18rem;
     height: 20rem;
     background-color: #c8e0ca;
 }
 
+/* saved note card title */
 .card-title {
     text-align: center;
     color: #145858;
     font-weight: 700;
+
 }
 
 #divider {
@@ -120,6 +167,12 @@
     height: 2px;
 }
 
+/* saved note card text/ message */
+
+.card-title{
+    margin-top: 5px;
+    margin-bottom: 0;
+}
 .card-text {
     color: #105454;
     text-align: center;
@@ -130,17 +183,20 @@
     flex-direction: column;
 }
 
-.card-body img{
-    margin-left: 5px;
-    width: 35px;
-}
+
 
 
 .card-body p {
     height: 10.5rem;
-    overflow: scroll;
+    overflow-y: scroll;
     padding: 2px 5px 2px 2px;
+    font-weight:400;
+    border-bottom: 1px solid #125a5a1d;
 }
+
+
+
+/* saved notes delete button  */
 
 #delete {
     align-self: center;

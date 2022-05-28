@@ -59,7 +59,7 @@ function shownotes() {
         
         <div class="notecard my-2 mx-2 card" id="notecard">
             <div class="card-body">
-                <h5 class="card-title"> ${titleObj[index]} </h5>
+                <h4 class="card-title"> ${titleObj[index]} </h4>
                 <hr id="divider">
                 <p class="card-text"> ${element}</p>
                 <div id="delete"><button id='${index}' onclick="deletenote(this.id)"         class="btn btn-primary"> Delete</button></div>

@@ -5,14 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <!-- Bootstarp -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Amatic+SC&family=Cookie&family=Dancing+Script&family=IM+Fell+English+SC&family=Satisfy&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/note.png">
 
     <title>Sticky Notes</title>
+
+    <!-- 
+    font-family: 'Alegreya SC', serif;
+    font-family: 'Amatic SC', cursive;
+    font-family: 'Cookie', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'IM Fell English SC', serif;
+    font-family: 'Satisfy', cursive; -->
 
 </head>
 
@@ -46,8 +63,8 @@
     <div class="container my-5 py-4" id="card-instruct-cont">
 
         <!-- <h1>Welcome to Sticky Notes</h1> -->
+        
         <!-- NOTE INPUT CARD -->
-
         <div class="card" id="card">
             <div class="card-body">
                 <!-- card Add a note -->
@@ -84,11 +101,6 @@
             <p class="instruct-item">Hit 'Save' to pin it down.</p>
             <p class="instruct-item">Voila done !!</p>
 
-            <!-- <p class="instruct-item">PIN</p>
-            <p class="instruct-item">IT</p>
-            <p class="instruct-item">DOWN</p> -->
-
-
         </div>
 
 
@@ -112,7 +124,7 @@
             <!--             
             <div class="notecard my-2 mx-2 card" id="notecard">
                 <div class="card-body">
-                    <h5 class="card-title"> ${titleObj[index]} </h5>
+                    <h4 class="card-title"> ${titleObj[index]} </h4>
                     <hr id="divider">
                     <p class="card-text"> ${element}</p>
                     <button id='${index}' onclick="deletenote(this.id)" class="btn btn-primary"> Delete</button>
