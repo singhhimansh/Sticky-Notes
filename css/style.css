@@ -3,7 +3,33 @@
     background-color: #145858;
     overflow: auto;
     font-family: 'Satisfy', cursive;
-   
+    margin-bottom: 110px;
+
+}
+
+/* navbar */
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#navbarcontainer {
+    padding: 0 8%;
+    margin-bottom: 5px;
+}
+
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: x-large;
+    font-weight: 600;
+    font-variant-caps: petite-caps;
+}
+
+#navbarSupportedContent {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
+    margin-bottom: 4px;
 }
 
 /* container 1- note card and instructions */
@@ -34,17 +60,23 @@
     font-weight: 700;
 }
 
-#addtitle {
-
-    background-color: #e8e9e8d9;
-    border-bottom: 1.5px solid #145858;
-    box-shadow: none;
-}
 
 /* pencil image in title  */
 .card-body img {
     margin-left: 5px;
     width: 35px;
+}
+
+#inputform{
+    display: flex;
+    flex-direction: column;
+}
+
+#addtitle {
+
+    background-color: #e8e9e8d9;
+    border-bottom: 1.5px solid #145858;
+    box-shadow: none;
 }
 
 
@@ -53,14 +85,15 @@
     background-color: #e8e9e8d9;
     border-bottom: 1.5px solid #145858;
     box-shadow: none;
+    max-height: 100px;
+    min-height: 100px;
 }
 
 #addbtn {
 
     background-color: #057f92;
     border: none;
-    position: relative;
-    left: 33%;
+    align-self: center;
     padding: 7px 28px;
 
 }
@@ -83,52 +116,49 @@
     /* padding: 30px 20px; */
 }
 
-.instruct-item {
-    /* margin: 5px 0; */
-    padding: 4px;
+
+
+.instruct h3 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 900;
+
 }
 
-.instruct h2 {
-    /* font-family: 'Alegreya SC', serif; */
-    /* font-family: 'Cookie', cursive; */
-    /* font-family: 'Dancing Script', cursive; */
-    /* font-family: 'IM Fell English SC', serif; */
-    /* font-family: 'Satisfy', cursive; --> */
-    /* font-family: 'Cookie', cursive; */
-    font-family: 'Amatic SC', cursive;
-}
 .instruct h4 {
-    /* font-family: 'Alegreya SC', serif; */
-    /* font-family: 'Cookie', cursive; */
-    /* font-family: 'Dancing Script', cursive; */
-    /* font-family: 'IM Fell English SC', serif; */
-    /* font-family: 'Satisfy', cursive; --> */
-    /* font-family: 'Cookie', cursive; */
+    margin-bottom: 20px;
+    font-weight: 900;
     font-family: 'Amatic SC', cursive;
+
 }
+
 .instruct p {
-    /* font-family: 'Alegreya SC', serif; */
-    /* font-family: 'Cookie', cursive; */
-    /* font-family: 'Dancing Script', cursive; */
-    /* font-family: 'IM Fell English SC', serif; */
     font-family: 'Satisfy', cursive;
-    /* font-family: 'Cookie', cursive; */
-    /* font-family: 'Amatic SC', cursive; */
+    font-size: large;
+    margin-bottom: 10px;
+
 }
 
 #boytable img {
     width: 230px;
-    align-items: center;
+    margin: 60px 0;
 }
 
-#displayzone h1 {
+/* displayzone */
 
-    font-weight: 900;
+#displayzone {
+    overflow: auto;
+    min-height: 300px;
+}
+
+#displayzone h3 {
+
+    font-weight: 600;
     font-variant-caps: petite-caps;
-
     font-family: 'Dancing Script', cursive;
 
 }
+
+
 
 
 /* clear all notes button */
@@ -167,12 +197,19 @@
     height: 2px;
 }
 
+/* note display zone */
+
+#notes {
+    justify-content: center;
+}
+
 /* saved note card text/ message */
 
-.card-title{
+.card-title {
     margin-top: 5px;
     margin-bottom: 0;
 }
+
 .card-text {
     color: #105454;
     text-align: center;
@@ -190,7 +227,7 @@
     height: 10.5rem;
     overflow-y: scroll;
     padding: 2px 5px 2px 2px;
-    font-weight:400;
+    font-weight: 400;
     border-bottom: 1px solid #125a5a1d;
 }
 
@@ -215,4 +252,64 @@
 .card-body button:hover {
 
     background-color: #05a4bd;
+}
+
+
+/* footer */
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color:#87898a;
+}
+
+/* copyright */
+
+.copyright {
+    background-color: #212529;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* padding: 0 0 30px 0; */
+}
+
+.copyright p {
+    padding: 10px 20px;
+    align-self: baseline;
+    margin-bottom: 0;
+}
+
+/* .copyright hr {
+    width: 2px;
+    height: 30px;
+    background-color: white;
+} */
+
+/* developer */
+
+#devlogo {
+    height: 2.5rem;
+    position: relative;
+    /* top: 17px; */
+    padding: 0 4px;
+}
+
+
+#dev a {
+
+    text-decoration: none;
+    color:#87898a;
+}
+
+#dev a:hover{
+    color:#cbcbcb;
+}
+
+#dev a:active {
+
+    text-decoration: none;
+    font-weight: 600;
+    color:#cbcbcb;
 }

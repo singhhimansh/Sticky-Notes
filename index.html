@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Bootstarp -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -16,6 +16,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Amatic+SC&family=Cookie&family=Dancing+Script&family=IM+Fell+English+SC&family=Satisfy&display=swap"
         rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -36,20 +39,15 @@
 
 <body class="body">
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">STICKY NOTES</a>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid" id="navbarcontainer">
+            <a class="navbar-brand" href="index.html">Sticky Notes</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"></a>
-                    </li>
-                </ul>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" id="searchtxt" type="search" placeholder="Search note"
                         aria-label="Search">
@@ -63,7 +61,7 @@
     <div class="container my-5 py-4" id="card-instruct-cont">
 
         <!-- <h1>Welcome to Sticky Notes</h1> -->
-        
+
         <!-- NOTE INPUT CARD -->
         <div class="card" id="card">
             <div class="card-body">
@@ -71,7 +69,7 @@
                 <h5 class="card-title mb-3" id="cardhead">Add a Note<img src="images/pencil.png" alt=""></h5>
 
                 <!-- textarea -->
-                <form>
+                <form id="inputform">
                     <!-- title -->
                     <div class="mb-3">
                         <input type="text" class="form-control" placeholder="Title" id="addtitle"
@@ -94,12 +92,12 @@
             <img src="images/boytable.png" alt="">
         </div>
         <div class="instruct">
-            <h2 class="instruct-item">Hello Pal</h2>
+            <h3 class="instruct-item">Hello Pal</h3>
             <h4 class="instruct-item">Welcome to Sticky Notes</h4>
             <p class="instruct-item">With this app, you can take your notes and pin them down below.</p>
             <p class="instruct-item">Start with adding a Title and then write the message.</p>
             <p class="instruct-item">Hit 'Save' to pin it down.</p>
-            <p class="instruct-item">Voila done !!</p>
+            <p class="instruct-item">Voila. That's all !!!</p>
 
         </div>
 
@@ -112,7 +110,7 @@
             <!-- clear all notes -->
             <button id='clearall' class="btn btn-primary"> Clear All Notes</button>
 
-            <h1>Your Notes</h1>
+            <h3>Your Notes</h3>
         </div>
 
 
@@ -133,6 +131,20 @@
 
         </div>
     </div>
+
+    <footer>
+
+        <div class="copyright">
+
+            <p>Copyright &copy Sticky Notes</p>
+            <p id="dev"> Handcrafted with <i class="fa fa-heart" style="color: red;"> </i>  by <a href="https://singhhimansh.github.io/" target="_blank"><img id="devlogo"
+                        src="images/logo skyblue.png"> Himanshu Singh </a>
+            </p>
+
+        </div>
+
+
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
