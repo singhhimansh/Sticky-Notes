@@ -61,6 +61,12 @@ html {
     margin-bottom: 4px;
 }
 
+.alert {
+    z-index: 10;
+    position: fixed;
+    top: 70px;
+}
+
 /* container 1- note card and instructions */
 
 #card-instruct-cont {
@@ -114,6 +120,7 @@ html {
     background-color: #e8e9e8d9;
     border-bottom: 1.5px solid #145858;
     box-shadow: none;
+    overflow-x: auto;
 }
 
 
@@ -224,9 +231,11 @@ html {
 
 /* saved note card title */
 .card-title {
+    height: 28px;
     text-align: center;
     color: #145858;
     font-weight: 700;
+    overflow:hidden;
 
 }
 

@@ -5,32 +5,57 @@ shownotes();
 
 let addbtn = document.getElementById('addbtn');
 addbtn.addEventListener('click', function (e) {
-    let addtxt = document.getElementById('addtxt').value;
-    let addtitle = document.getElementById('addtitle').value;
+    e.preventDefault();
+    let addtxt = document.getElementById('addtxt').value.trim();
+    let addtitle = document.getElementById('addtitle').value.trim();
 
-    if (addtxt.length < 3 || addtitle < 3) {
+    if (addtxt.length < 3 || addtitle.length < 3) {
 
-        html=`<div class="alert alert-success" role="alert">
-        A simple success alert—check it out!
+        let main= document.querySelector('main>div')
+        // console.log(main);
+        
+        html=`<div class="alert container alert-danger alert-dismissible fade show" role="alert">
+        <strong>Too short !</strong> Title & message must be atleast three characters long.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>`;
 
-    }
+        main.insertAdjacentHTML('afterbegin', html);
 
-    let notes = localStorage.getItem("notes");
-    
-    if (notes === null) {
-        notesObj = [];
+        setTimeout(()=>{
+          document.querySelector('main>div>div').remove();
+
+        }, 1200)
+        
+
     } else {
-        notesObj = JSON.parse(notes);
+        let notes = localStorage.getItem("notes");
+        notesObj = notes === null ? [] : JSON.parse(notes);
+
+        let newNote = {[addtitle]:addtxt};
+        notesObj.unshift(newNote);
+
+        localStorage.setItem("notes", JSON.stringify(notesObj));
+
+        let main= document.querySelector('main>div');
+        // console.log(main);
+        
+        html=`<div class="alert container alert-info alert-dismissible fade show" role="alert">
+        <strong>Voila !</strong> Note saved.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>`;
+
+        main.insertAdjacentHTML('afterbegin', html);
+
+        setTimeout(()=>{
+          document.querySelector('main>div>div').remove();
+
+        }, 1200);
+
+        addtxt='';
+        addtitle=''; 
     }
 
-    let newNote = {[addtitle]:addtxt}
-    notesObj.unshift(newNote);
-
-    localStorage.setItem("notes", JSON.stringify(notesObj));
-
-    addtxt= "";
-    addtitle= '';
+  
 
     shownotes();
 
@@ -42,23 +67,13 @@ addbtn.addEventListener('click', function (e) {
 
 function shownotes() {
   
-    // let notestitle = localStorage.getItem("notestitle")
     let notes = localStorage.getItem("notes");
-    if (notes === null) {
-        notesObj = [];
-        // titleObj= [];
-    } else {
-        notesObj = JSON.parse(notes); // array
-        // titleObj = JSON.parse(notestitle);
-        // console.log(notesObj);
-    }
+    notesObj = notes === null ? [] : JSON.parse(notes);
 
 
     let html = "";
 
     notesObj.forEach(function (element, index,) {
-        console.log(element, index);
-        console.log((Object.keys(element)[0]));
         html += `
         
         <div class="notecard my-2 mx-2 card" id="notecard">
@@ -85,18 +100,27 @@ function shownotes() {
 
 // delete note
 function deletenote(index) {
-    console.log(index);
     let notes = localStorage.getItem("notes");
-    if (notes == null) {
-        notesObj = [];
-    } else {
-        notesObj = JSON.parse(notes); //array
-    }
+    notesObj = notes === null ? [] : JSON.parse(notes);
+
+    let main= document.querySelector('main>div')
+    
+    html=`<div class="alert container alert-warning alert-dismissible fade show" role="alert">
+    <strong>Alert !</strong> Note deleted.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>`;
+
+    main.insertAdjacentHTML('afterbegin', html);
+
+    setTimeout(()=>{
+        document.querySelector('main>div>div').remove();
+
+    }, 1200)
 
     notesObj.splice(index, 1);
     localStorage.setItem("notes", JSON.stringify(notesObj));
     shownotes();
-
+    
 }
 
 
@@ -111,12 +135,8 @@ search.addEventListener("input", function () {
 
         let cardtxt = element.getElementsByTagName("p")[0].innerText.toLowerCase();
         let titletxt = element.getElementsByClassName("card-title")[0].innerText.toLowerCase();
-        if (cardtxt.includes(inputval) || titletxt.includes(inputval)) {
-            element.style.display = "block";
-        }
-        else {
-            element.style.display = "none";
-        }
+
+        element.style.display = (cardtxt.includes(inputval) || titletxt.includes(inputval)) ?  "block" : "none";
 
     })
 
@@ -128,10 +148,28 @@ search.addEventListener("input", function () {
 
 let clearall = document.getElementById('clearall');
 clearall.addEventListener('click',function() {
+    if (confirm('Do you want to delete all notes?')) {
+        
+    
+    let main= document.querySelector('main>div')
+    
+    html=`<div class="alert container alert-danger alert-dismissible fade show" role="alert">
+    <strong>Uhhh!</strong> All saved notes deleted. Add a new one.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>`;
+
+    main.insertAdjacentHTML('afterbegin', html);
+
+    setTimeout(()=>{
+        document.querySelector('main>div>div').remove();
+
+    }, 1200)
 
     localStorage.clear();
     let noteselm = document.getElementById("notes");
-    noteselm.innerHTML = `All cleared. Use <em style="font-style:italic;">"Add a Note"</em> section above to add notes.`;
+    noteselm.innerHTML = `All cleared. Use "Add a Note"section above to add notes.`;
+
+    }
 
 })
 
