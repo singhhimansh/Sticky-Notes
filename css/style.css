@@ -1,19 +1,50 @@
+html {
+    scroll-behavior: smooth;
+
+}
+
+::selection {
+    background: #f0ebebbc;
+    color: #018906;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    /* background: rgba(33, 37, 41, 0.246); */
+    background: rgba(241, 241, 241, 0.748);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #48566b;
+    border-radius: 5px;
+}
+
+
 .body {
     color: #c8e0ca;
     background-color: #145858;
     overflow: auto;
-    font-family: 'Satisfy', cursive;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    min-height: 100vh;
 }
 
 /* navbar */
-.navbar {
-    padding-top: 0;
-    padding-bottom: 0;
-}
+/* .navbar {
+
+} */
 
 #navbarcontainer {
     padding: 0 8%;
     margin-bottom: 5px;
+}
+
+#navbarcontainer input {
+    width: 60%;
 }
 
 .navbar-brand {
@@ -65,10 +96,18 @@
     width: 35px;
 }
 
-#inputform{
+#inputform {
+    
     display: flex;
     flex-direction: column;
 }
+
+/* #inputform>div:nth-child(2)::after {
+    content:'* Title & Note must be three characters long';
+    color: red;
+    font-size: x-small;
+} */
+
 
 #addtitle {
 
@@ -95,6 +134,8 @@
     padding: 7px 28px;
 
 }
+
+
 
 #addbtn:hover {
 
@@ -223,7 +264,7 @@
 
 .card-body p {
     height: 10.5rem;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 2px 5px 2px 2px;
     font-weight: 400;
     border-bottom: 1px solid #125a5a1d;
@@ -255,12 +296,12 @@
 
 /* footer */
 
-footer{
-    position: relative;
+footer {
+    /* position: absolute; */
     left: 0;
     bottom: 0;
     width: 100%;
-    color:#87898a;
+    color: #87898a;
 }
 
 /* copyright */
@@ -298,16 +339,16 @@ footer{
 #dev a {
 
     text-decoration: none;
-    color:#87898a;
+    color: #87898a;
 }
 
-#dev a:hover{
-    color:#cbcbcb;
+#dev a:hover {
+    color: #cbcbcb;
 }
 
 #dev a:active {
 
     text-decoration: none;
     font-weight: 600;
-    color:#cbcbcb;
+    color: #cbcbcb;
 }

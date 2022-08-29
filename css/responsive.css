@@ -1,0 +1,7 @@
+@media screen and (max-width: 768px) {
+
+    #card-instruct-cont {
+       flex-direction: column-reverse;
+    }
+    
+}

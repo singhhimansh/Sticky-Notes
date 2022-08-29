@@ -16,12 +16,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Amatic+SC&family=Cookie&family=Dancing+Script&family=IM+Fell+English+SC&family=Satisfy&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="icon" href="images/note.png">
 
     <title>Sticky Notes</title>
@@ -42,18 +44,17 @@
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid" id="navbarcontainer">
             <a class="navbar-brand" href="index.html">Sticky Notes</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+            </button> -->
+            
             <form class="d-flex" role="search">
                 <input class="form-control me-2" id="searchtxt" type="search" placeholder="Search note"
                     aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-        </div>
+            </div>
         </div>
     </nav>
 
@@ -66,24 +67,24 @@
             <!-- NOTE INPUT CARD -->
             <div class="card" id="card">
                 <div class="card-body">
-                    <!-- card Add a note -->
+                    <!-- heading Add a note -->
                     <h5 class="card-title mb-3" id="cardhead">Add a Note<img src="images/pencil.png" alt=""></h5>
 
-                    <!-- textarea -->
+                    <!-- input fields-->
                     <form id="inputform">
                         <!-- title -->
                         <div class="mb-3">
                             <input type="text" class="form-control" placeholder="Title" id="addtitle"
                                 aria-describedby="emailHelp">
                         </div>
-                        <!-- textarea -->
+                        <!-- message area -->
                         <div class="form-floating mb-3">
                             <textarea class="form-control" placeholder="Leave aa comment here" id="addtxt"
                                 style="height: 100px"></textarea>
                             <label for="floatingTextarea2" style="color: gray ;">Write a message . . . </label>
                         </div>
 
-                        <button type="submit" class="btn btn-primary" id="addbtn">Save</button>
+                        <input type="submit" class="btn btn-primary" id="addbtn" value="Save">
                     </form>
 
                 </div>
@@ -140,9 +141,9 @@
         <div class="copyright">
 
             <p>Copyright &copy Sticky Notes</p>
-            <p id="dev"> Handcrafted with <i class="fa fa-heart" style="color: red;"> </i> by <a
-                    href="https://singhhimansh.github.io/" target="_blank"><img id="devlogo"
-                        src="images/logo skyblue.png"> Himanshu Singh </a>
+            <p id="dev"> Built with <i class="fa fa-heart" style="color: red;"> </i> by <a
+                    href="https://himanshusingh.site/" target="_blank"><img id="devlogo"
+                        src="images/HS c11.png" style="width:35px; height:30px;"> Himanshu Singh </a>
             </p>
 
         </div>
